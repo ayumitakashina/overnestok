@@ -1,0 +1,10 @@
+<h1>Overs#index</h1>
+<p>Find me in app/views/overs/index.html.erb</p>
+
+<% @article.each do |a| %>
+  <%= a.title %>
+  <%= link_to a.video_url.to_s do %>
+      <%= image_tag(a.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+  <% end %>
+
+<% end%>
